@@ -2,12 +2,14 @@ import React from 'react';
 import { Text, StyleSheet, View, Button } from 'react-native';
 
 
-const ResultsShowScreen = () =>{
 
+const ResultsShowScreen = ({navigation}) =>{
+    id = navigation.getParam('id')
+    console.log(id);
 
 return (
 
-    <Text>Result Show Screen</Text>
+    <Text></Text>
 
 );
 }

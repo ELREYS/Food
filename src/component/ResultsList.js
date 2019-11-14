@@ -7,7 +7,7 @@ import {
   FlatList
 } from "react-native";
 import ResultsDetail from "./ResultsDetail";
-import {withNavigation} from 'react-navigation'
+import { withNavigation } from "react-navigation";
 
 const ResultsList = ({ title, results, navigation }) => {
   return (
@@ -21,7 +21,7 @@ const ResultsList = ({ title, results, navigation }) => {
         keyExtractor={result => result.id}
         renderItem={({ item }) => {
           return (
-            <TouchableOpacity onPress={() => navigation.navigate('ResultShow')}>
+            <TouchableOpacity onPress={() => navigation.navigate("ResultShow",{id: item.id} )}>
               <ResultsDetail results={item} />
             </TouchableOpacity>
           );
